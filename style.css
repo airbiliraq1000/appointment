@@ -8,7 +8,7 @@ body {
 
 .container {
     text-align: center;
-    padding: 0px;
+    padding: 20px;
 }
 
 .nav {
@@ -16,8 +16,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     background-color: #1a1a1a;
-    padding: 15px 40px;
-    gap: 20px;
+    padding: 15px 20px;
+    gap: 15px;
     border-bottom: 2px solid #444;
     box-shadow: 0 4px 15px rgba(0,0,0,0.7);
 }
@@ -25,20 +25,20 @@ body {
 .nav .logo {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav .logo img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #555;
-    box-shadow: 0 0 15px #111 inset, 0 0 5px #222;
+    box-shadow: 0 0 12px #111 inset, 0 0 4px #222;
 }
 
 .show-card-btn {
-    padding: 12px 28px;
+    padding: 10px 22px;
     background-color: #2b2b2b;
     color: #cfcfcf;
     border: 2px solid #555;
@@ -49,7 +49,7 @@ body {
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s all;
-    box-shadow: 0 0 10px #111 inset;
+    box-shadow: 0 0 8px #111 inset;
 }
 
 .show-card-btn:hover {
@@ -60,10 +60,11 @@ body {
 }
 
 .card {
-    margin: 40px auto;
-    width: 360px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 360px;
     background: linear-gradient(145deg, #1b1b1b, #2a2a2a);
-    padding: 30px;
+    padding: 25px;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0,0,0,0.8), 0 0 20px #111 inset;
     text-align: center;
@@ -75,17 +76,17 @@ body {
 
 .card label {
     display: block;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 12px;
     color: #aaa;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .card input[type="date"] {
     width: 85%;
-    padding: 12px;
-    margin-bottom: 18px;
+    padding: 10px;
+    margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid #555;
     background-color: #222;
@@ -103,8 +104,8 @@ body {
 }
 
 .card .btn {
-    padding: 12px 25px;
-    margin: 6px;
+    padding: 10px 22px;
+    margin: 5px;
     border: 2px solid #555;
     border-radius: 6px;
     background-color: #2b2b2b;
@@ -114,7 +115,7 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s all;
-    box-shadow: 0 0 8px #111 inset;
+     box-shadow: 0 0 6px #111 inset;
 }
 
 .card .btn:hover {
@@ -127,7 +128,7 @@ body {
 #cancelBtn {
     border-color: #900;
     color: #f55;
-    box-shadow: 0 0 8px #600 inset;
+    box-shadow: 0 0 6px #600 inset;
 }
 
 #cancelBtn:hover {
@@ -137,26 +138,102 @@ body {
 }
 
 #successMessage {
-    margin-top: 25px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 18px;
     color: #4caf50;
     font-family: 'Cinzel', serif;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 4px #000;
+    text-shadow: 1px 1px 3px #000;
     display: none;
 }
 
 #successMessage img,
 #successImage {
-    margin-top: 15px;
+    margin-top: 12px;
     width: 100%;
     border-radius: 12px;
     border: 1px solid #555;
     display: none;
-    box-shadow: 0 0 12px #000 inset;
+    box-shadow: 0 0 10px #000 inset;
 }
 
 #toggleCard:checked ~ .card {
     opacity: 1;
     pointer-events: auto;
 }
+
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+    }
+
+    .nav .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .show-card-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+     }
+ 
+    .card {
+        width: 95%;
+        padding: 20px;
+     }
+
+    .card label {
+        font-size: 16px;
+     }
+
+    .card input[type="date"] {
+        padding: 8px;
+    }
+
+    .card .btn {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    #successMessage {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .show-card-btn {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card label {
+        font-size: 14px;
+    }
+
+    .card input[type="date"] {
+        width: 90%;
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .card .btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    #successMessage {
+        font-size: 14px;
+    }
+ }
